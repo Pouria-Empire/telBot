@@ -1,6 +1,7 @@
 from telegram.ext import *
 import downloader
 import requests
+import re
 API_KEY = "1939749981:AAHU4JixeLfiT8GxOVNQLeXWdkNC9oxwCTw"
 
 def start_handler(updater,context):
@@ -33,7 +34,6 @@ def message_handler(updater,context):
         reply_message = "Fine!"
     elif(text.startswith("video")):
         link = re.findall("video (.+)", text)
-        #"/home/pouria/pythonCourse/tests/1.mp4"
         send_video(downloader.get_url(link[0]),updater.message.chat.id)
         reply_message = "here is your video"
     updater.message.reply_text(reply_message)

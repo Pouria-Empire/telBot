@@ -35,4 +35,4 @@ def get_url(inputted):
 
     wget.download(url_parsed,bar=bar_custom,out=path)
     
-    return path + "/" + file_name + ".mp4"
+    return path + "/" + file_name[0] + ".mp4"
