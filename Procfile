@@ -1,1 +1,1 @@
-web: gunicorn taskbottel.wsgi
+web: python bot2.py
