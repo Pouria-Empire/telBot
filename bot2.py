@@ -27,7 +27,6 @@ def send_video(file,chatID):
 def message_handler(updater,context):
     text = updater.message.text
     reply_message = ""
-
     if(text in ("hello","hi","salam")):
         reply_message = "hello world!"
     elif(text in ("how are you","what do you do!")):
